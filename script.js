@@ -88,8 +88,11 @@ var answerDiv4 = document.getElementById("ans4Div");
 var answerDivArray = [answerDiv1, answerDiv2, answerDiv3, answerDiv4]
 var questionNumber = 0;
 var correctAnswer = questions[questionNumber].correct;
-
 var score = 0;
+
+
+
+
 function showQuestion() {
     if (questionNumber === questions.length) {
         endGame();
@@ -125,12 +128,13 @@ answerDivArray.forEach(function (e) {
 }
 
 );
+// need to complete the rest of the end game information
+var highScoreElement = document.getElementById("high-score")
 
 function endGame() {
     questionContainerElement.remove("hide");
     secondsDisplay.textContent = "done!";
     totalSeconds = 0;
-    
 }
 
 function updateScore() {
